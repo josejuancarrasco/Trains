@@ -23,7 +23,7 @@ public class Controller {
 		try {
 			return new ResponseEntity<String>(this.trainService.getDistance(route), HttpStatus.OK);
 		} catch (Exception e) {
-			throw new Exception(e.getMessage());
+			return new ResponseEntity<String>( e.getMessage(), HttpStatus.EXPECTATION_FAILED);
 		}
 	}
 }
