@@ -1,7 +1,6 @@
 package com.trains.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +20,7 @@ public class Controller {
 	@GetMapping(value = "/calculateDistance/{route}")
 	public ResponseEntity<String> calculateDistance(@PathVariable(value = "route") String route) throws Exception {
 		try {
-			return new ResponseEntity<String>(this.trainService.getDistance(route), HttpStatus.OK);
+			return new ResponseEntity<String>("The distance for the " + route + " is: " + this.trainService.getDistance(route), HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<String>( e.getMessage(), HttpStatus.EXPECTATION_FAILED);
 		}

@@ -27,7 +27,6 @@ public class TrainsService implements ITrainsService {
 			while (!found && j < graphs.size()) {
 				if (graphs.get(j).getStart().equals( ways[ i ] ) && graphs.get( j ).getEnd().equals(ways[i + 1])) {
 					result += graphs.get( j ).getDistance();
-					graphs.remove( j );
 					found = true;
 				}
 				j++;
