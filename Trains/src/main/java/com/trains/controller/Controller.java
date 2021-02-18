@@ -15,7 +15,7 @@ import com.trains.services.ITrainsService;
 public class Controller {
 
 	@Autowired
-	ITrainsService trainService;
+	private ITrainsService trainService;
 
 	@GetMapping(value = "/calculateDistance/{route}")
 	public ResponseEntity<String> calculateDistance(@PathVariable(value = "route") String route) throws Exception {
