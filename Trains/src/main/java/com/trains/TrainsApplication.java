@@ -9,5 +9,6 @@ public class TrainsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TrainsApplication.class, args);
 	}
+		
 
 }
